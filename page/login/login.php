@@ -46,38 +46,52 @@
                         <i data-feather="star"></i>
                       </div>
                       <h4 class="mt-1 mb-5 pb-1">Pandawara</h4>
+                      <!-- Alert Section -->
+                      <?php
+                      session_start();
+                      if (isset($_SESSION['error'])) {
+                          echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>";
+                          echo $_SESSION['error'];
+                          echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>";
+                          echo "</div>";
+                          unset($_SESSION['error']); // Hapus pesan error setelah ditampilkan
+                      }
+                      ?>
                     </div>
 
-                    <form>
-                      <p>Please login to your account</p>
-
+                    <form action="../../controller/loginController.php" method="POST">
                       <div class="form-outline mb-4">
-                        <input
-                          type="email"
-                          id="form2Example11"
-                          class="form-control border-2 border-dark shadow-none"
-                          placeholder="Phone number or email address"
-                        />
                         <label class="form-label" for="form2Example11"
                           >Username</label
                         >
+                        <input
+                          type="text"
+                          id="form2Example11"
+                          class="form-control border-2 border-dark shadow-none"
+                          placeholder="Username"
+                          name = "username"
+                          required
+                        />
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input
-                          type="password"
-                          id="form2Example22"
-                          class="form-control border-2 border-dark shadow-none"
-                        />
-                        <label class="form-label" for="form2Example22"
+                        <label class="form-label" for="password"
                           >Password</label
                         >
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          placeholder="Password"
+                          required
+                          class="form-control border-2 border-dark shadow-none"
+                        />
                       </div>
 
                       <div class="text-center pt-1 mb-5 pb-1">
                         <button
                           class="btn btn-dark btn-block fa-lg gradient-custom-2 mb-3"
-                          type="button"
+                          type="submit"
                         >
                           Log in
                         </button>

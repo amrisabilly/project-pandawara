@@ -61,46 +61,52 @@
                       <h4 class="mt-1 mb-5 pb-1">Pandawara</h4>
                     </div>
 
-                    <form>
+                    <form
+                      action="../../controller/registerController.php"
+                      method="POST"
+                    >
                       <p>Please register to your new account</p>
 
                       <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11"
+                          >Username</label
+                        >
                         <input
-                          type="email"
-                          id="form2Example11"
+                          type="text"
+                          id="username"
+                          name="username"
+                          required
                           class="form-control border-2 border-dark shadow-none"
                         />
-                        <label class="form-label" for="form2Example11"
-                          >Username or Email</label
-                        >
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input
-                          type="password"
-                          id="form2Example22"
-                          class="form-control border-2 border-dark shadow-none"
-                        />
                         <label class="form-label" for="form2Example22"
                           >Password</label
                         >
+                        <input
+                          type="password"
+                          id="password"
+                          name="password"
+                          required
+                          class="form-control border-2 border-dark shadow-none"
+                        />
                       </div>
 
                       <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22"
+                          >Confirm Password</label
+                        >
                         <input
                           type="password"
                           id="form2Example22"
                           class="form-control border-2 border-dark shadow-none"
                         />
-                        <label class="form-label" for="form2Example22"
-                          >Confirm Password</label
-                        >
                       </div>
-
                       <div class="text-center pt-1 mb-5 pb-1">
                         <button
                           class="btn btn-dark btn-block fa-lg gradient-custom-2 mb-3"
-                          type="button"
+                          type="submit"
                         >
                           Registrasi
                         </button>
