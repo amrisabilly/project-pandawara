@@ -14,6 +14,16 @@
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style -->
+    <style>
+        body {
+            overflow: auto;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -48,10 +58,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-light" href="about.html">About Us</a>
+              <a class="nav-link text-light active" aria-current="page" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="programs.html">Programs</a>
+              <a class="nav-link text-light" href="programs.html">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="partnership.html">Galery</a>
@@ -63,7 +73,74 @@
         </div>
       </div>
     </nav>
-    <h1>partnership</h1>
+
+    <div style="margin: 150px;">
+      <h1 style="font-size: 70px;">Galery</h1>
+      <!-- susunan foto -->
+     <div class="container">
+      <center>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col-6">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 400px; border-radius: 20px;">
+          </div>
+          <div class="col-6">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 400px; border-radius: 20px;">
+          </div>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col-4">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 300px; border-radius: 20px;">
+          </div>
+          <div class="col-4">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 300px; border-radius: 20px;">
+          </div>
+          <div class="col-4">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 300px; border-radius: 20px;">
+          </div>
+        </div>
+        <div class="row" style="margin-top: 70px;">
+          <div class="col-6">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 400px; border-radius: 20px;">
+          </div>
+          <div class="col-6">
+            <img src="../../Assets/istockphoto-2155915974-612x612.jpg" alt="" style="width: 400px; border-radius: 20px;">
+          </div>
+        </div>
+        </center>
+      </div>
+    </div>
+
+    
+
+    <!-- footer -->
+    <footer style="background-color: black; height: 300px;">
+        <div style="margin: 150px; padding-top: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                    <h1 style="color: white; lighting-color: white; font-size: 30px;">Pandawara</h1>
+                    <nav class="nav" style="margin-left: -12px; margin-top: 50px;">
+                        <a class="nav-link text-light white" href="#">Active</a>
+                        <a class="nav-link text-light white" href="#">Link</a>
+                        <a class="nav-link text-light white" href="#">Link</a>
+                    </nav>
+                    </div>
+                    <div class="col">
+                    <h1 style="color: white; lighting-color: white; font-size: 30px;">Donation Center</h1>
+                    <p style="color: white  ; lighting-color: white; margin-left: -12px; margin-top: 50px;">
+                        Every donation counts. Your financial support fuels our efforts to clean rivers, protect habitats, and preserve biodiversity.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <hr style="color: white; lighting-color: white;">
+            <center>
+            <h1 style="font-size: 20px; color: white; lighting-color: white;">©2024 Pandawara. All Rights Reserved.</h1>
+            </center>
+            <p>dsd</p>
+        </div>
+    </footer>
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
