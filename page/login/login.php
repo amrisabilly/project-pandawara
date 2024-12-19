@@ -116,10 +116,7 @@
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                     <h4 class="mb-4">We are more than just a company</h4>
                     <p class="small mb-0">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Pandawara Komunitas berkomitmen untuk menjaga kelestarian lingkungan dengan melaksanakan kegiatan bersih-bersih pantai, sebagai bentuk kepedulian terhadap kebersihan alam dan pelestarian ekosistem laut demi masa depan yang lebih baik.
                     </p>
                   </div>
                 </div>
