@@ -67,13 +67,13 @@ $result = mysqli_query($conn, $sql);
               <a class="nav-link text-light" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="news.html">News</a>
+              <a class="nav-link text-light" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="galery.html">Galery</a>
+              <a class="nav-link text-light" href="galery.php">Galery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="team.html">Team</a>
+              <a class="nav-link text-light" href="team.php">Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="kontak.html">Contact</a>
@@ -157,27 +157,27 @@ $result = mysqli_query($conn, $sql);
         <div class="col-md-4" style="padding-left: 8em">
           <h4 class="text-uppercase fw-bold mb-3">Quick Links</h4>
           <ul class="list-unstyled">
-            <li>
-              <a href="about.html" class="text-light text-decoration-none"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a href="news.html" class="text-light text-decoration-none"
-                >News</a
-              >
-            </li>
-            <li>
-              <a href="gallery.html" class="text-light text-decoration-none"
-                >Gallery</a
-              >
-            </li>
-            <li>
-              <a href="contact.html" class="text-light text-decoration-none"
-                >Contact</a
-              >
-            </li>
-          </ul>
+              <li>
+                <a href="about.html" class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="news.php" class="text-light text-decoration-none"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="galery.php" class="text-light text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="kontak.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
         </div>
 
         <!-- Column 3: Donation Center -->

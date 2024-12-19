@@ -73,7 +73,7 @@
               <a class="nav-link text-light" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="news.php">Events</a>
+              <a class="nav-link text-light" href="news.php">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="galery.php">Galery</a>
@@ -186,19 +186,27 @@
       <div class="col-md-4">
         <h4 class="text-uppercase fw-bold mb-3">Quick Links</h4>
         <ul class="list-unstyled">
-          <li>
-            <a href="about.html" class="text-light text-decoration-none">About Us</a>
-          </li>
-          <li>
-            <a href="event.html" class="text-light text-decoration-none">Events</a>
-          </li>
-          <li>
-            <a href="galery.html" class="text-light text-decoration-none">Gallery</a>
-          </li>
-          <li>
-            <a href="kontak.html" class="text-light text-decoration-none">Contact</a>
-          </li>
-        </ul>
+              <li>
+                <a href="about.html" class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="news.php" class="text-light text-decoration-none"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a href="galery.php" class="text-light text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="kontak.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
       </div>
 
       <!-- Column 3: Donation Center -->
@@ -220,3 +228,16 @@
     </div>
   </div>
 </footer>
+
+<!-- Script Bootstrap -->
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

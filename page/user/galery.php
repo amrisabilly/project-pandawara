@@ -170,17 +170,17 @@
                 >
               </li>
               <li>
-                <a href="news.html" class="text-light text-decoration-none"
+                <a href="news.php" class="text-light text-decoration-none"
                   >News</a
                 >
               </li>
               <li>
-                <a href="gallery.html" class="text-light text-decoration-none"
+                <a href="galery.php" class="text-light text-decoration-none"
                   >Gallery</a
                 >
               </li>
               <li>
-                <a href="contact.html" class="text-light text-decoration-none"
+                <a href="kontak.html" class="text-light text-decoration-none"
                   >Contact</a
                 >
               </li>
