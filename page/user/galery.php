@@ -38,7 +38,7 @@
             <i data-feather="star"></i>
             <i data-feather="star"></i>
           </div>
-          <a class="navbar-brand text-light" href="index.html">Pand</a>
+          <a class="navbar-brand text-light" href="index.html">Pandawara</a>
         </div>
 
         <!-- Tombol Toggle Navbar -->
@@ -61,13 +61,13 @@
               <a class="nav-link text-light" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="news.html">News</a>
+              <a class="nav-link text-light" href="news.php">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="galery.html">Galery</a>
+              <a class="nav-link text-light" href="galery.php">Galery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="team.html">Team</a>
+              <a class="nav-link text-light" href="team.php">Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="kontak.html">Contact</a>
@@ -82,71 +82,47 @@
       <p style="margin-top: 10px; font-size: 20px">
         Beberapa Dokumentasi Kegiatan Yang Telah Kami lakukan
       </p>
-      <!-- susunan foto -->
+
       <div class="container">
         <center>
-          <div class="row" style="margin-top: 70px">
-            <div class="col-6">
-              <img
-                src="https://statik.tempo.co/data/2023/10/04/id_1242606/1242606_720.jpg"
-                alt=""
-                style="width: 500px; border-radius: 20px"
-              />
-              <p>Pantai Cibutun</p>
-            </div>
-            <div class="col-6">
-              <img
-                src="https://cdn0-production-images-kly.akamaized.net/_9JFZtLzn7Qpmo2K7Xw1-HGlXGM=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4280274/original/083922600_1672736226-314024500_706369087077220_1758278816610169613_n.jpg"
-                alt=""
-                style="width: 500px; border-radius: 20px"
-              />
-              <p>Kegiatan Rutin Mingguan</p>
-            </div>
-          </div>
-          <div class="row" style="margin-top: 70px">
-            <div class="col-4">
-              <img
-                src="https://asset-2.tstatic.net/trends/foto/bank/images/ribuan-warga-dan-pandawara-group-membersihkan-pantai-sukaraja-bandar-lampung.jpg"
-                alt=""
-                style="width: 400px; border-radius: 20px"
-              />
-              <p>Pantai Sukaraja</p>
-            </div>
-            <div class="col-4">
-              <img
-                src="https://asset.kompas.com/crops/K5G0gMbp3xSsHOcIuN56reVJ20I=/0x0:0x0/750x500/data/photo/2023/05/22/646b0178b7395.jpg"
-                alt=""
-                style="width: 340px; border-radius: 20px"
-              />
-              <p>Pantai Labuan</p>
-            </div>
-            <div class="col-4">
-              <img
-                src="https://awsimages.detik.net.id/community/media/visual/2023/05/22/pandawara-bareng-warga-bersihkan-pantai-di-banten-sampah-capai-ribuan-karung_169.jpeg?w=1200"
-                alt=""
-                style="width: 400px; border-radius: 20px"
-              />
-              <p>Pantai Banten</p>
-            </div>
-          </div>
-          <div class="row" style="margin-top: 70px">
-            <div class="col-6">
-              <img
-                src="https://asset-2.tstatic.net/jabar/foto/bank/images/5-punggawa-Pandawa-Group-saat-berfoto.jpg"
-                alt=""
-                style="width: 500px; border-radius: 20px"
-              />
-              <p>Pantai Kesenden</p>
-            </div>
-            <div class="col-6">
-              <img
-                src="https://awsimages.detik.net.id/community/media/visual/2023/07/18/aksi-pandawara-grup-dan-pkt-bersihkan-sampah-di-krukut-depok-1_169.jpeg?w=600&q=90"
-                alt=""
-                style="width: 500px; border-radius: 20px"
-              />
-              <p>Kali Krukut Depok</p>
-            </div>
-          </div>
+          <?php
+          // Koneksi ke database
+          include('../../config/database.php');
+
+          // Query untuk mengambil data local_hero
+          $query = "SELECT * FROM local_hero";
+          $result = mysqli_query($conn, $query);
+
+          // Variabel untuk menghitung jumlah item per row
+          $counter = 0; // Counter untuk item
+          $columns = 3; // Jumlah kolom per baris
+
+          // Looping data local_hero
+          while ($hero = mysqli_fetch_assoc($result)) {
+              // Jika item pertama atau setiap kelipatan jumlah kolom, buka row baru
+              if ($counter % $columns === 0) {
+                  echo '<div class="row" style="margin-top: 70px">';
+              }
+
+              // Tampilkan data dalam kolom
+              echo '<div class="col-' . (12 / $columns) . '">';
+              echo '<img src="' . htmlspecialchars($hero['location']) . '" alt="" style="width: 100%; border-radius: 20px" />';
+              echo '<p>' . htmlspecialchars($hero['title']) . '</p>';
+              echo '</div>';
+
+              $counter++; // Increment counter
+
+              // Jika sudah mencapai jumlah kolom, tutup row
+              if ($counter % $columns === 0) {
+                  echo '</div>';
+              }
+          }
+
+          // Tutup row terakhir jika ada item yang tersisa
+          if ($counter % $columns !== 0) {
+              echo '</div>';
+          }
+          ?>
         </center>
       </div>
     </div>

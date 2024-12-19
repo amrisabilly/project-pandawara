@@ -1,39 +1,33 @@
+<?php
+include('../../config/database.php');
+$sql = "SELECT * FROM team ORDER BY id";
+$result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pandawara - News</title>
-    <!-- Boostrap CSS -->
+    <title>Team</title>
+    <!-- Boostrap Css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-    <!-- Custom Style -->
+
+    <!-- style -->
     <style>
       body {
         overflow: auto;
       }
       body::-webkit-scrollbar {
         display: none;
-      }
-      .news-header {
-        background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80")
-          no-repeat center center/cover;
-        height: 400px;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .news-header h1 {
-        font-size: 4rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
       }
     </style>
   </head>
@@ -88,83 +82,42 @@
         </div>
       </div>
     </nav>
-    <!-- Header Section -->
-    <header class="news-header">
-      <h1>Beach Cleanup Campaign</h1>
-    </header>
 
-    <!-- News Content -->
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-6">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            class="img-fluid rounded shadow"
-            alt="Beach Cleanup"
-          />
-        </div>
-        <div class="col-lg-6">
-          <h2 class="mt-3 mt-lg-0">Our Mission to Keep Beaches Clean</h2>
-          <p>
-            On December 15th, 2024, Pandawara organized a beach cleanup at the
-            serene Parangtritis Beach. The event brought together over 200
-            volunteers committed to removing waste, protecting marine life, and
-            preserving the natural beauty of our coastal areas.
-          </p>
-          <p>
-            The cleanup covered a stretch of 5 kilometers, collecting over 500
-            kilograms of waste, including plastics, glass, and other debris.
-            This initiative reflects our dedication to creating sustainable and
-            eco-friendly environments.
-          </p>
-          <p>
-            Join us in our mission to make a difference. Together, we can
-            protect our planet, one beach at a time.
-          </p>
-          <a href="join.html" class="btn btn-primary">Join Our Next Event</a>
-        </div>
-      </div>
+    <!-- isi konten -->
+    <div style="margin: 150px">
+      <center>
+        <h1 style="font-size: 70px">Our Team</h1>
+        <p style="margin-top: 10px; font-size: 20px">
+          Orang - Orang Hebat di Balik Pandawara
+        </p>
+      </center>
+      <div class="container" style="margin-top: 70px">
+        <div class="row">
+            <?php
+            $counter = 0; // Counter untuk melacak jumlah kartu
+            $total_rows = ceil(mysqli_num_rows($result) / 3); // Total baris berdasarkan data
+            $data = []; // Array untuk menyimpan hasil
+            while ($team = mysqli_fetch_assoc($result)) {
+                $data[] = $team; // Simpan setiap baris data ke dalam array
+            }
 
-      <!-- Gallery Section -->
-      <div class="row mt-5">
-        <h3>Highlights</h3>
-        <div class="col-md-4">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            class="img-fluid rounded shadow"
-            alt="Volunteers"
-          />
-          <p class="mt-2">
-            Para relawan bekerja sama dengan penuh semangat untuk membersihkan
-            pantai dari berbagai jenis sampah yang mengancam keindahan dan
-            kelestarian lingkungan.
-          </p>
+            for ($row = 0; $row < $total_rows; $row++) {
+                $start = $row * 3; // Awal indeks
+                $end = min($start + 3, count($data)); // Akhir indeks (maksimal 3 per baris)
+            ?>
+            <div class="row justify-content-center">
+                <?php for ($i = $start; $i < $end; $i++) { ?>
+                    <div class="col-md-4 mb-4">
+                        <center>
+                            <img src="<?= $data[$i]['image']; ?>" alt="" style="height: 200px; border-radius: 20px" />
+                            <h3><?= htmlspecialchars($data[$i]['name']); ?></h3>
+                        </center>
+                    </div>
+                <?php } ?>
+            </div>
+            <?php } ?>
         </div>
-        <div class="col-md-4">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            class="img-fluid rounded shadow"
-            alt="Collected Trash"
-          />
-          <p class="mt-2">
-            Sampah yang berhasil dikumpulkan meliputi plastik, kaca, dan limbah
-            lainnya, dengan total lebih dari 500 kilogram yang siap didaur ulang
-            atau dibuang dengan benar.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            class="img-fluid rounded shadow"
-            alt="Clean Beach"
-          />
-          <p class="mt-2">
-            Pantai Parangtritis kembali bersih dan indah berkat kerja keras
-            relawan. Kegiatan ini menjadi langkah nyata dalam menjaga keindahan
-            alam bagi generasi mendatang.
-          </p>
-        </div>
-      </div>
+    </div>
     </div>
 
    <!-- Footer -->
@@ -249,12 +202,20 @@
     </div>
   </footer>
 
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Script Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+
     <!-- Script Icons -->
     <script>
       feather.replace();

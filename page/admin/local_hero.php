@@ -97,7 +97,7 @@ $heroes = mysqli_query($conn, "SELECT * FROM local_hero");
                     <tr>
                         <td><?= $hero['id'] ?></td>
                         <td><?= $hero['title'] ?></td>
-                        <td><?= $hero['location'] ?></td>
+                        <td><img src="<?= $hero['location'] ?>" alt="Image" width="50"></td>
                         <td>
                             <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#editHeroModal<?= $hero['id'] ?>">Edit</button>
