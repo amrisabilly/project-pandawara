@@ -23,6 +23,15 @@
       body::-webkit-scrollbar {
         display: none;
       }
+      .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transisi lebih smooth */
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
+
     </style>
   </head>
   <body>
@@ -106,7 +115,7 @@
 
               // Tampilkan data dalam kolom
               echo '<div class="col-' . (12 / $columns) . '">';
-              echo '<img src="' . htmlspecialchars($hero['location']) . '" alt="" style="width: 100%; border-radius: 20px" />';
+              echo '<img src="' . htmlspecialchars($hero['location']) . '" alt="" style="width: 100%; border-radius: 20px;margin-bottom: 1em;" class="img-hover"/>';
               echo '<p>' . htmlspecialchars($hero['title']) . '</p>';
               echo '</div>';
 

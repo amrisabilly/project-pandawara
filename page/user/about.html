@@ -23,6 +23,14 @@
         body::-webkit-scrollbar {
             display: none;
         }
+        .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transisi lebih smooth */
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
     </style>
   </head>
   <body>
@@ -58,7 +66,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-light" href="about.html">About Us</a>
+              <a class="nav-link text-light active" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="news.php">News</a>
@@ -111,10 +119,10 @@
             <div class="col">
                 <h1 style="font-size: 70px;">Our Vision</h3>
                 <p style="font-size: 20px;">Healthy environment and caring society</p>
-                <img src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_FOOdmvWt.jpg&w=256&q=75" alt="" style="border-radius: 20px; width: 300px; margin-left: 80px;">
+                <img src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_FOOdmvWt.jpg&w=256&q=75" alt="" style="border-radius: 20px; width: 300px; margin-left: 80px;" class="img-hover">
             </div>
             <div class="col">
-                <img src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_cRDaOEBO.jpg&w=640&q=75" alt="" style="border-radius: 20px; width: 300px; margin-left: 200px;">
+                <img src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_cRDaOEBO.jpg&w=640&q=75" alt="" style="border-radius: 20px; width: 300px; margin-left: 200px;" class="img-hover">
                 <h1 style="font-size: 70px; margin-left: 200px;">Our Mission</h1>
                 <p style="font-size: 20px;">To achieve this vision, we embark on a multifaceted approach. Through grassroots initiatives and collaborative partnerships, we clean rivers, restore ecosystems, and respond swiftly to environmental emergencies.</p>
             </div>

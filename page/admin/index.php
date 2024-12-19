@@ -17,6 +17,14 @@
             padding: 5px 10px;
             border-radius: 5px;
         }
+        .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; 
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
     </style>
 </head>
 
@@ -91,7 +99,7 @@
                 <div class="row justify-content-center">
                     <!-- Statistik Baris Pertama -->
                     <div class="col-md-4">
-                        <div class="card text-center mb-3">
+                        <div class="card text-center mb-3 img-hover">
                             <div class="card-header">Users</div>
                             <div class="card-body">
                                 <i class="fa fa-user" style="font-size:50px;"></i>
@@ -109,7 +117,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card text-center mb-3">
+                        <div class="card text-center mb-3 img-hover">
                             <div class="card-header">Events</div>
                             <div class="card-body">
                                 <i class="fa fa-calendar" style="font-size:50px;"></i>
@@ -126,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card text-center mb-3">
+                        <div class="card text-center mb-3 img-hover">
                             <div class="card-header">Teams</div>
                             <div class="card-body">
                                 <i class="fa fa-users" style="font-size:50px;"></i>
@@ -146,7 +154,7 @@
                 <!-- Statistik Baris Kedua -->
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card text-center mb-3">
+                        <div class="card text-center mb-3 img-hover">
                             <div class="card-header">Local Heroes</div>
                             <div class="card-body">
                                 <i class="fa fa-star" style="font-size:50px;"></i>

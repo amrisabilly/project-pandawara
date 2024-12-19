@@ -29,6 +29,14 @@ $result = mysqli_query($conn, $sql);
       body::-webkit-scrollbar {
         display: none;
       }
+      .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transisi lebih smooth */
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
     </style>
   </head>
   <body>
@@ -109,7 +117,7 @@ $result = mysqli_query($conn, $sql);
                 <?php for ($i = $start; $i < $end; $i++) { ?>
                     <div class="col-md-4 mb-4">
                         <center>
-                            <img src="<?= $data[$i]['image']; ?>" alt="" style="height: 200px; border-radius: 20px" />
+                            <img src="<?= $data[$i]['image']; ?>" alt="" style="height: 200px; border-radius: 20px;margin-bottom: 1em;" class="img-hover"/>
                             <h3><?= htmlspecialchars($data[$i]['name']); ?></h3>
                         </center>
                     </div>

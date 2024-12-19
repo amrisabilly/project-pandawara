@@ -23,6 +23,15 @@
         body::-webkit-scrollbar {
             display: none;
         }
+        .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transisi lebih smooth */
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
+
     </style>
   </head>
   <body>
@@ -58,7 +67,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto gap-3">
             <li class="nav-item">
-              <a class="nav-link text-light" href="about.html">About Us</a>
+              <a class="nav-link text-light active" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="news.php">News</a>
@@ -278,13 +287,13 @@
         Discover how our efforts in cleaning rivers and environmental cleanup
         are making a lasting impact on our planet.
       </p>
-      <div class="container">
+      <div class="container" style="margin-top: 3em;">
         <div class="row">
           <div class="col">
             <img
               src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_weJENNpe.jpg&w=640&q=75"
               style="width: 605px; height: 540px"
-              class="rounded-3"
+              class="rounded-3 img-hover shadow"
               alt=""
             />
           </div>
@@ -296,7 +305,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_mTSBNmAJ.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -304,7 +313,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_FOOdmvWt.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -316,7 +325,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_AVavrWvM.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -324,7 +333,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_GaxBcVNG.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -340,7 +349,7 @@
         Learn about our rapid response initiatives to address environmental
         emergencies, protecting ecosystems and communities.
       </p>
-      <div class="container">
+      <div class="container" style="margin-top: 3em;">
         <div class="row">
           <div
             class="col d-flex flex-column flex-column justify-content-center align-items-center"
@@ -350,7 +359,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_dLezhDXQ.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -358,7 +367,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_KnxwPVCO.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -370,7 +379,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_SJTuiIDC.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -378,7 +387,7 @@
               <img
                 src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_ufDjDXeA.jpg&w=256&q=75"
                 style="width: 283px; height: 250px"
-                class="rounded-3"
+                class="rounded-3 img-hover"
                 alt=""
               />
             </div>
@@ -387,7 +396,7 @@
             <img
               src="https://pandawara.group/_next/image?url=https%3A%2F%2Fpandawara.group%2Fassets%2F20240513_weJENNpe.jpg&w=640&q=75"
               style="width: 605px; height: 540px"
-              class="rounded-3"
+              class="rounded-3 img-hover"
               alt=""
             />
           </div>

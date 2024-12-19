@@ -35,6 +35,15 @@
         font-size: 4rem;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
       }
+
+      .img-hover {
+          transition: transform 0.4s ease, box-shadow 0.3s ease; /* Transisi lebih smooth */
+        } 
+
+        .img-hover:hover {
+          transform: scale(1.05); 
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+        }
     </style>
   </head>
   <body>
@@ -99,7 +108,7 @@
         <div class="col-lg-6">
           <img
             src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            class="img-fluid rounded shadow"
+            class="img-fluid rounded shadow img-hover"
             alt="Event Highlight"
           />
         </div>
@@ -139,7 +148,7 @@
           <div class="col-md-4">
             <img
               src="<?= htmlspecialchars($event['image']); ?>"
-              class="img-fluid rounded shadow"
+              class="img-fluid rounded shadow img-hover"
               alt="<?= htmlspecialchars($event['title']); ?>"
             />
             <p class="mt-2"><?= htmlspecialchars($event['description']); ?></p>
